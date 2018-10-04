@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Train Time</title>
+  <link rel="shortcut icon" href="./assest/images/icon.png">
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/5.5.2/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/5.5.2/firebase-auth.js"></script>
+  <script defer src="/__/firebase/5.5.2/firebase-database.js"></script>
+  <script defer src="/__/firebase/5.5.2/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/5.5.2/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="./assest/css/reset.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./assest/css/style.css" />
+
+  <!-- Added link to the jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./assest/images/logo.png" alt="Train time logo" class="logo">
+        </div>
+
+        <div class="col-md-6" id="toLogin">
+          <button type="button" class="btn btn-outline-danger login" onclick="googleLogin()"><i class="fa fa-google fa-fw">
+            </i> Login with Google+</button>
+
+          <button type="button" class="btn btn-outline-dark login" onclick="githubLogin()"><i class="fa fa-github fa-fw">
+            </i> Login with Github</button>
+        </div>
+
+        <div class="col-md-6" id="toLogout">
+          <!-- PONER UN HELLO NAME -->
+          <button type="button" class="btn btn-outline-primary login" onclick="logout()"><i class="fa fa-sign-out">
+            </i> Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <p>This is some text.</p>
+    <p>This is another text.</p>
+  </div>
+
+
+
+
+
+
+  <script src="./assest/javascript/app.js"></script>
+</body>
+
+</html>

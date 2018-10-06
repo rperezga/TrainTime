@@ -56,7 +56,7 @@ $(function () {
         $("#toLogout").attr("hidden", true);
         $("#newTrain").attr("hidden", true);
     } else {
-        if ( logged == "true" ) {
+        if (logged == "true") {
             $("#toLogin").attr("hidden", true);
             $("#newTrain").attr("hidden", false);
         } else {
@@ -75,27 +75,83 @@ $(function () {
     db.collection("trains").onSnapshot(doc => {
         $("#data").empty();
         doc.forEach(function (doc) {
-            $("#data").append("<tr>")
-            $("#data").append("<td>" + doc.data().name + "</td>");
-            $("#data").append("<td>" + doc.data().destination + "</td>");
-            $("#data").append("<td>" + doc.data().frequency + "</td>");
-            $("#data").append("<td>data 2</td>");
-            $("#data").append("<td>data 3</td>");
-            $("#data").append("</tr>")
+            //console.log(doc.id)
+
+            var row = $("<tr>");
+            row.addClass("train-data");
+            row.attr("id", doc.id);
+
+            var colName = $("<td>");
+            colName.append(doc.data().name);
+
+            var colDestination = $("<td>");
+            colDestination.append(doc.data().destination);
+
+            var colFrequency = $("<td>");
+            colFrequency.append(doc.data().frequency);
+
+            var colNext = $("<td>");
+            colNext.append("data1");
+
+            var colAway = $("<td>");
+            colAway.append("data2");
+
+            var colEdit = $("<td>");
+            colEdit.append("<i class='fa fa-edit'></i>");
+
+            var colDel = $("<td>");
+            colDel.append("<i class='fa fa-trash'></i>");
+
+
+            row.append(colName)
+                .append(colDestination)
+                .append(colFrequency)
+                .append(colNext)
+                .append(colAway)
+                .append(colEdit)
+                .append(colDel)
+
+            $("#data").append(row);
+
+
+
+
+
+            // $("#data").append("<tr class='train-data' id='" + doc.id + "'>")
+            // $("#data").append("<td>" + doc.data().name + "</td>");
+            // $("#data").append("<td>" + doc.data().destination + "</td>");
+            // $("#data").append("<td>" + doc.data().frequency + "</td>");
+            // $("#data").append("<td>data 2</td>");
+            // $("#data").append("<td>data 3</td>");
+            // $("#data").append("<td> <i class='fa fa-edit'></i> </td>");
+            // $("#data").append("<td> <i class='fa fa-trash'></i> </td>");            
+            // $("#data").append("</tr>")
+
+
         });
     });
 
 
-    $("#newTrainSubmit").on("click", function(event) {
+
+
+
+
+    $("#newTrainSubmit").on("click", function (event) {
         // prevent form from submitting
         event.preventDefault();
 
         var trainName = $("#inputName").val();
         var trainDestination = $("#inputDestination").val();
+        var trainStart = $("#inputStart").val();
         var trainFrequency = $("#inputFrequency").val();
 
         var newTrain = db.collection("trains").doc();
-        newTrain.set({'name': trainName, 'destination': trainDestination, 'frequency': trainFrequency});
+        newTrain.set({ 'name': trainName, 'destination': trainDestination, 'start-time': trainStart, 'frequency': trainFrequency });
 
+        $("#new-train")[0].reset();
     });
+
+    $(document).on("click", ".train-data", function () {
+        console.log($(this).attr("id"))
+    })
 });

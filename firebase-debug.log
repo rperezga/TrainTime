@@ -1,24 +1,29 @@
-[debug] [2018-10-04T23:28:17.203Z] ----------------------------------------------------------------------
-[debug] [2018-10-04T23:28:17.206Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rperez\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-10-04T23:28:17.207Z] CLI Version:   4.2.1
-[debug] [2018-10-04T23:28:17.207Z] Platform:      win32
-[debug] [2018-10-04T23:28:17.207Z] Node Version:  v8.11.3
-[debug] [2018-10-04T23:28:17.207Z] Time:          Thu Oct 04 2018 19:28:17 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-10-04T23:28:17.207Z] ----------------------------------------------------------------------
+[debug] [2018-10-06T17:11:00.375Z] ----------------------------------------------------------------------
+[debug] [2018-10-06T17:11:00.377Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rperez\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-06T17:11:00.377Z] CLI Version:   5.0.1
+[debug] [2018-10-06T17:11:00.377Z] Platform:      win32
+[debug] [2018-10-06T17:11:00.377Z] Node Version:  v8.11.3
+[debug] [2018-10-06T17:11:00.377Z] Time:          Sat Oct 06 2018 13:11:00 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-06T17:11:00.377Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-10-04T23:28:17.218Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-10-04T23:28:17.219Z] > authorizing via signed-in user
-[debug] [2018-10-04T23:28:17.222Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/traintime-62ca5  
+[debug] [2018-10-06T17:11:00.392Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-06T17:11:00.392Z] > authorizing via signed-in user
+[debug] [2018-10-06T17:11:00.392Z] [iam] checking project traintime-62ca5 for permissions ["firebase.projects.get"]
+[debug] [2018-10-06T17:11:00.395Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-06T17:11:00.395Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-10-06T17:11:00.560Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T17:11:00.572Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/traintime-62ca5:testIamPermissions  
+
+[debug] [2018-10-06T17:11:00.817Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T17:11:00.822Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/traintime-62ca5  
  
-[debug] [2018-10-04T23:28:17.711Z] <<< HTTP RESPONSE 200
-[debug] [2018-10-04T23:28:17.715Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/traintime-62ca5  
- 
-[debug] [2018-10-04T23:28:17.919Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T17:11:01.097Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'c:\Users\rperez\Desktop\BOOTCAMP\WEEK07\TrainTime'...
 [info] 
-[debug] [2018-10-04T23:28:18.061Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/571646282680/clients/_:getWebAppConfig  
+[debug] [2018-10-06T17:11:01.113Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/571646282680/clients/_:getWebAppConfig  
  
-[debug] [2018-10-04T23:28:18.326Z] <<< HTTP RESPONSE 200
-[info] i  hosting[traintime-62ca5]: Serving hosting files from: public
-[info] +  hosting[traintime-62ca5]: Local server: http://localhost:5000
+[debug] [2018-10-06T17:11:01.486Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000

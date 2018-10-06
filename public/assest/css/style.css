@@ -5,3 +5,15 @@
 .login{
     margin-left: 20px;
 }
+
+#newTrain{
+    margin-top: 20px;
+    border: 1px solid rgb(178, 220, 221);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.button-submit{
+    text-align: right;
+}
+

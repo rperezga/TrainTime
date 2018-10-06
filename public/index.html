@@ -62,28 +62,36 @@
   <div class="container">
 
     <div id="newTrain">
-      <form>
+      <form id="new-train">
         <div class="row">
           <div class="col">
-              <div class="form-group">
-                  <label for="inputName">Name</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Enter name">
-                </div>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Enter name">
+            </div>
           </div>
           <div class="col">
-              <div class="form-group">
-                  <label for="inputDestination">Destination</label>
-                  <input type="text" class="form-control" id="inputDestination" placeholder="Enter destination">
-                </div>
+            <div class="form-group">
+              <label for="inputDestination">Destination</label>
+              <input type="text" class="form-control" id="inputDestination" placeholder="Enter destination">
+            </div>
           </div>
           <div class="col">
-              <div class="form-group">
-                  <label for="inputFrequency">Frequency (min)</label>
-                  <input type="text" class="form-control" id="inputFrequency" placeholder="Enter frequency">
-                </div>
+            <div class="form-group">
+              <label for="inputStart">Start Time</label>
+              <input type="text" class="form-control" id="inputStart" placeholder="Enter start time (18:00)">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="inputFrequency">Frequency (min)</label>
+              <input type="text" class="form-control" id="inputFrequency" placeholder="Enter frequency (min)">
+            </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" id="newTrainSubmit">Submit</button>
+        <div class="button-submit">
+          <button type="submit" class="btn btn-outline-success" id="newTrainSubmit">Add Train</button>
+        </div>
       </form>
     </div>
 
@@ -96,13 +104,13 @@
           <th scope="col">Frequency (min)</th>
           <th scope="col">Next Arrival</th>
           <th scope="col">Minutes Away</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Del</th>
         </tr>
       </thead>
       <tbody id="data"> </tbody>
     </table>
   </div>
-
-
 
 
   <script src="./assest/javascript/app.js"></script>

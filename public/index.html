@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
   <!-- <link rel="stylesheet" type="text/css" media="screen" href="./assest/css/reset.css" /> -->
   <link rel="stylesheet" type="text/css" media="screen" href="./assest/css/style.css" />
 
@@ -39,19 +41,19 @@
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto" id="toLogin">
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-danger login" onclick="googleLogin()"><i class="fa fa-google fa-fw">
+            <button type="button" class="btn btn-outline-danger login" id="googleLogin"><i class="fa fa-google fa-fw">
               </i> Login with Google+</button>
           </li>
 
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-dark login" onclick="githubLogin()"><i class="fa fa-github fa-fw">
+            <button type="button" class="btn btn-outline-dark login" id="githubLogin"><i class="fa fa-github fa-fw">
               </i> Login with Github</button>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto" id="toLogout">
           <li class="nav-item" id="name"></li>
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-primary login" onclick="logout()"><i class="fa fa-sign-out">
+            <button type="button" class="btn btn-outline-primary login" id="logout"><i class="fa fa-sign-out">
               </i> Logout</button>
           </li>
         </ul>
@@ -95,21 +97,38 @@
       </form>
     </div>
 
+    <div id="trainLogin">
+      <table class="table table-hover" style="margin-top: 30px;">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Time Away</th>
+            <th scope="col" id="adminEdit">Edit</th>
+            <th scope="col" id="adminDel">Del</th>
+          </tr>
+        </thead>
+        <tbody id="dataLogin"> </tbody>
+      </table>
+    </div>
 
-    <table class="table table-hover" style="margin-top: 30px;">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Train Name</th>
-          <th scope="col">Destination</th>
-          <th scope="col">Frequency (min)</th>
-          <th scope="col">Next Arrival</th>
-          <th scope="col">Minutes Away</th>
-          <th scope="col">Edit</th>
-          <th scope="col">Del</th>
-        </tr>
-      </thead>
-      <tbody id="data"> </tbody>
-    </table>
+    <div id="trainLogout">
+      <table class="table table-hover" style="margin-top: 30px;">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Time Away</th>
+          </tr>
+        </thead>
+        <tbody id="dataLogout"> </tbody>
+      </table>
+    </div>
+
   </div>
 
 

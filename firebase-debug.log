@@ -27,3 +27,32 @@
 [debug] [2018-10-06T17:11:01.486Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-07T14:01:55.409Z] ----------------------------------------------------------------------
+[debug] [2018-10-07T14:01:55.412Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rperez\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-07T14:01:55.414Z] CLI Version:   5.0.1
+[debug] [2018-10-07T14:01:55.414Z] Platform:      win32
+[debug] [2018-10-07T14:01:55.414Z] Node Version:  v8.11.3
+[debug] [2018-10-07T14:01:55.414Z] Time:          Sun Oct 07 2018 10:01:55 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-07T14:01:55.414Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-07T14:01:55.422Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-07T14:01:55.437Z] > authorizing via signed-in user
+[debug] [2018-10-07T14:01:55.437Z] [iam] checking project traintime-62ca5 for permissions ["firebase.projects.get"]
+[debug] [2018-10-07T14:01:55.437Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-07T14:01:55.437Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-10-07T14:01:55.637Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T14:01:55.637Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/traintime-62ca5:testIamPermissions  
+
+[debug] [2018-10-07T14:01:55.925Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-07T14:01:55.925Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/traintime-62ca5  
+ 
+[debug] [2018-10-07T14:01:56.128Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\rperez\Desktop\BOOTCAMP\WEEK07\TrainTime'...
+[info] 
+[debug] [2018-10-07T14:01:56.128Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/571646282680/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-07T14:01:56.575Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
